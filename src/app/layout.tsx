@@ -20,12 +20,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`max-w-5xl mx-auto ${Inter.className}`}>
+      <body
+        className={`max-w-5xl mx-auto ${Inter.className} flex flex-col min-h-screen`}
+      >
         <NuqsAdapter>
           <Header />
-          <main className="w-full mx-auto p-4 sm:p-8 mb-16 grid gap-16">
-            {children}
-          </main>
+          {children}
         </NuqsAdapter>
       </body>
     </html>
