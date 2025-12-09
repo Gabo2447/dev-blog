@@ -27,6 +27,9 @@ catalogs:
     next:
       specifier: latest
       version: 16.0.7
+    nuqs:
+      specifier: latest
+      version: 2.8.2
     react:
       specifier: latest
       version: 19.2.1
@@ -72,6 +75,9 @@ importers:
       eslint-config-next:
         specifier: 'catalog:'
         version: 16.0.7(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
+      nuqs:
+        specifier: 'catalog:'
+        version: 2.8.2(next@16.0.7(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1)
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.17
@@ -463,6 +469,9 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
@@ -1590,6 +1599,27 @@ packages:
   node-releases@2.0.27:
     resolution: {integrity: sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==}
 
+  nuqs@2.8.2:
+    resolution: {integrity: sha512-KMb6gmUJaLVRw+SbKUmBTo0IWLGU2s1Z4Iz/N64+EIDcu6Iw51CuppgKmxZR2EW3iXaOz5LF4avGKD2wq45eqg==}
+    peerDependencies:
+      '@remix-run/react': '>=2'
+      '@tanstack/react-router': ^1
+      next: '>=14.2.0'
+      react: '>=18.2.0 || ^19.0.0-0'
+      react-router: ^5 || ^6 || ^7
+      react-router-dom: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@tanstack/react-router':
+        optional: true
+      next:
+        optional: true
+      react-router:
+        optional: true
+      react-router-dom:
+        optional: true
+
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
@@ -2324,6 +2354,8 @@ snapshots:
   '@nolyfill/is-core-module@1.0.39': {}
 
   '@rtsao/scc@1.1.0': {}
+
+  '@standard-schema/spec@1.0.0': {}
 
   '@swc/helpers@0.5.15':
     dependencies:
@@ -3560,6 +3592,13 @@ snapshots:
       - babel-plugin-macros
 
   node-releases@2.0.27: {}
+
+  nuqs@2.8.2(next@16.0.7(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.1))(react@19.2.1))(react@19.2.1):
+    dependencies:
+      '@standard-schema/spec': 1.0.0
+      react: 19.2.1
+    optionalDependencies:
+      next: 16.0.7(@babel/core@7.28.5)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
 
   object-assign@4.1.1: {}
 

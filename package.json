@@ -15,6 +15,7 @@
     "next": "catalog:"
   },
   "devDependencies": {
+    "nuqs": "catalog:",
     "typescript": "catalog:",
     "eslint": "catalog:",
     "eslint-config-next": "catalog:",

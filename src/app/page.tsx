@@ -1,3 +1,11 @@
+import Hero from "./components/hero";
+// import Tag from "./components/reusabled/Tag";
+
 export default function Page() {
-  return <h1>Hello Next.js!</h1>;
+  return (
+    <>
+      <Hero />
+      <main></main>
+    </>
+  );
 }
