@@ -21,7 +21,7 @@
     "paths": {
       "@/*": ["./*"],
       "@app/*": ["./src/app/*"],
-      "@api/*": ["./src/api/*"]
+      "@feature/*": ["./src/features/*"]
     }
   },
   "include": [

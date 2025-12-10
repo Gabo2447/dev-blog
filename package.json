@@ -6,24 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "keywords": [],
   "dependencies": {
+    "next": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:",
-    "next": "catalog:"
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "nuqs": "catalog:",
-    "typescript": "catalog:",
-    "eslint": "catalog:",
-    "eslint-config-next": "catalog:",
-    "tailwindcss": "catalog:",
     "@tailwindcss/postcss": "catalog:",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/jest": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
-    "@types/react-dom": "catalog:"
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-next": "catalog:",
+    "jest": "catalog:",
+    "jest-environment-jsdom": "catalog:",
+    "nuqs": "catalog:",
+    "tailwindcss": "catalog:",
+    "ts-node": "catalog:",
+    "ts-jest": "catalog:",
+    "typescript": "catalog:"
   },
   "author": "Gabo2447",
   "license": "Apache-2.0",
