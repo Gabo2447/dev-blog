@@ -10,6 +10,8 @@ catalog:
   nuqs: latest
   eslint: latest
   eslint-config-next: latest
+  eslint-plugin-jest-dom: latest
+  eslint-plugin-testing-library: latest
   next: latest
   react: latest
   react-dom: latest

@@ -27,6 +27,8 @@
     "@types/react-dom": "catalog:",
     "eslint": "catalog:",
     "eslint-config-next": "catalog:",
+    "eslint-plugin-jest-dom": "catalog:",
+    "eslint-plugin-testing-library": "catalog:",
     "jest": "catalog:",
     "jest-environment-jsdom": "catalog:",
     "nuqs": "catalog:",
