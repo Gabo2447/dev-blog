@@ -1,26 +1,25 @@
 "use client";
 
 // >> Imports <<
-import Badge from "@feature/TagsFilter/components/Badge";
-import { useQueryState } from "nuqs";
-
+import { getColors } from "../utils/getColors";
+import Badge from "@features/TagsFilter/components/Badge";
+import { parseAsString, useQueryState } from "nuqs";
+import { TagKey } from "../types/filters";
 // >> Typos <<
 interface Props {
-  tag: string;
-  colors: string[];
+  tag: TagKey;
 }
 
-const Tag: React.FC<Props> = ({ tag, colors }) => {
-  const [currentTag, setTag] = useQueryState("tag");
+const Tag: React.FC<Props> = ({ tag }) => {
+  const [currentTag, setTag] = useQueryState("tag", parseAsString);
   const isActive = currentTag === tag;
 
-  const activeColor = colors[1];
-  const inactiveColor = colors[0];
+  const [inactiveColor, activeColor] = getColors({ tag });
   const currentColor = isActive ? activeColor : inactiveColor;
 
   const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setTag(isActive ? null : tag);
+    setTag(isActive ? "" : tag);
   };
 
   return (
