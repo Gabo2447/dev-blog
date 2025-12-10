@@ -2,7 +2,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import Header from "@feature/Home/components/header";
+import Header from "@features/Home/components/header";
 import "@app/public/global.css";
 
 const inter = Inter({
