@@ -1,15 +1,14 @@
-// >> Types <<
-import { LayoutProps } from "@app/types/layout";
-import type { Metadata } from "next";
-
-// >> Components <<
 import { NuqsAdapter } from "nuqs/adapters/next/app";
-import Inter from "@app/fonts/Inter";
-import Header from "@app/components/header";
-// import Footer from "@app/components/footer";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-// >> Styles <<
-import "@app/styles/global.css";
+import Header from "@feature/Home/components/header";
+import "@app/public/global.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "GL | Dev Blog",
@@ -17,11 +16,15 @@ export const metadata: Metadata = {
     "A personal development blog featuring articles, tutorials, and insights on web development, programming best practices, and modern technologies.",
 };
 
-export default function RootLayout({ children }: LayoutProps) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body
-        className={`max-w-5xl mx-auto ${Inter.className} flex flex-col min-h-screen`}
+        className={`max-w-5xl mx-auto ${inter.variable} flex flex-col min-h-screen`}
       >
         <NuqsAdapter>
           <Header />

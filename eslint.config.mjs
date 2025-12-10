@@ -1,10 +1,8 @@
 // eslint.config.js
-
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
-// IMPORTAR PLUGINS Y REGLAS (Paso clave para la nueva API)
 import testingLibrary from "eslint-plugin-testing-library";
 import jestDom from "eslint-plugin-jest-dom";
 

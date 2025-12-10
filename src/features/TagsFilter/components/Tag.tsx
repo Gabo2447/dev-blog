@@ -1,7 +1,7 @@
 "use client";
 
 // >> Imports <<
-import Badge from "@app/components/reusabled/Badge";
+import Badge from "@feature/TagsFilter/components/Badge";
 import { useQueryState } from "nuqs";
 
 // >> Typos <<
@@ -9,9 +9,6 @@ interface Props {
   tag: string;
   colors: string[];
 }
-
-//! Como se yo que no se va a repetir mas de 2 colores
-//! Como se yo que no se van a invertir las posiciones? (Osea con el activo y el no activo)
 
 const Tag: React.FC<Props> = ({ tag, colors }) => {
   const [currentTag, setTag] = useQueryState("tag");

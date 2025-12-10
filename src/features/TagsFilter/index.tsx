@@ -1,7 +1,7 @@
-import { AVAILABLE_TAGS } from "../constants/Filters";
-import Tag from "./reusabled/Tag";
+import { AVAILABLE_TAGS } from "./constants/Filters";
+import Tag from "./components/Tag";
 
-const Filters: React.FC = () => {
+const TagsFilter: React.FC = () => {
   return (
     <div className="flex justify-center flex-wrap gap-2">
       <span className="text-center w-full text-sm font-semibold mb-2">
@@ -14,4 +14,4 @@ const Filters: React.FC = () => {
     </div>
   );
 };
-export default Filters;
+export default TagsFilter;
