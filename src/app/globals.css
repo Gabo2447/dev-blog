@@ -118,8 +118,45 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    @apply selection:bg-black selection:text-white;
+    @apply dark:selection:bg-white dark:selection:text-black;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .underline-effect {
+    @apply relative;
+
+    &::before {
+      @apply content-[""] absolute bottom-0 left-0 w-full h-px z-1;
+      @apply bg-linear-to-r from-gray-50 to-gray-400;
+      @apply transform scale-x-0 origin-left;
+      @apply transition duration-200 ease-in-out;
+    }
+
+    &:hover::before {
+      @apply transform scale-x-100;
+    }
+  }
+
+  .button-jump {
+    &:hover {
+      @apply rotate-8;
+    }
+
+    &:active {
+      @apply scale-90 -rotate-5;
+    }
   }
 }
