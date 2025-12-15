@@ -1,6 +1,11 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
+
 import "./globals.css";
+
+const Header = dynamic(() => import("@/components/home/header"));
+// const Footer = dinamic(() => import("@/components/home/footer"))
 
 const geistOnest = Onest({
   variable: "--font-geist-sans",
@@ -19,7 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${geistOnest.variable} antialiased`}>{children}</body>
+      <body
+        className={`${geistOnest.variable} flex flex-col antialiased min-h-screen`}
+      >
+        <Header />
+        <main className="flex-1 flex flex-col">{children}</main>
+        {/** <Footer /> */}
+      </body>
     </html>
   );
 }
