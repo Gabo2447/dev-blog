@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const header = () => {
   return (
-    <header className="bg-background sticky top-0 py-px">
+    <header className="bg-background/50 backdrop-blur-sm sticky top-0 py-px">
       <div className="my-3 container mx-auto px-8 sm:px-18 items-center flex justify-between">
         <Link href={"/"} className="underline-effect">
           <h2 className="font-bold text-xl sm:text-2xl">Dev Blog</h2>
