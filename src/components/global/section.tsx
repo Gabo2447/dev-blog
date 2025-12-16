@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface Props {
   children?: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const section = ({ children, className }: Props) => {
